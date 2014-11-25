@@ -12,14 +12,16 @@ alisdk
     //获取单个公司库信息
     function companyAction()
     {
-     $session =  $this->getSession();
-     $client = new AliClient();
-     $client->appkey = "you appkey";
-     $client->secretKey = "you secretKey";
-     $client->api = "company.get";
-     $request = new AliCompanyGetRequest();
-     $request->setMemberId($session->memberId);
-    $request->setFields("memberId,companyId,companyStatus,companyName,companyNameEN,account,productionService,companyCategoryInfo,foundedPlace");
-    $rsp =  $client->execute($request,$session->access_token);
-    echo  $rsp;
+         $session =  $this->getSession();
+         $client = new AliClient();
+         $client->appkey = "you appkey";
+         $client->secretKey = "you secretKey";
+         $client->api = "company.get";
+         
+         $request = new AliCompanyGetRequest();
+         $request->setMemberId($session->memberId);
+         $request->setFields("memberId,companyId,companyStatus,companyName,companyNameEN,account,productionService,companyCategoryInfo,foundedPlace");
+        
+         $rsp =  $client->execute($request,$session->access_token);
+         echo  $rsp;
     }
