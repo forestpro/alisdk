@@ -7,10 +7,10 @@ alisdk
 
 Demo for php:
 
-require_once ('/alisdk/AliClient.php');
-require_once ('/alisdk/RequestCheckUtil.php');
-
-require_once ('/alisdk/request/AliCompanyGetRequest.php');
+require_once ('/alisdk/AliClient.php');</br>
+require_once ('/alisdk/RequestCheckUtil.php');</br>
+</br>
+require_once ('/alisdk/request/AliCompanyGetRequest.php');</br>
 // 获取单个公司库信息
 
 function(){
