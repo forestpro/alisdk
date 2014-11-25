@@ -8,7 +8,8 @@ alisdk
 
     require_once ('/alisdk/AliClient.php');
     require_once ('/alisdk/RequestCheckUtil.php');
-    require_once ('/alisdk/request/AliCompanyGetRequest.php');//获取单个公司库信息
+    require_once ('/alisdk/request/AliCompanyGetRequest.php');
+    //获取单个公司库信息
     function companyAction()
     {
      $session =  $this->getSession();
