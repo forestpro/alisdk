@@ -6,29 +6,29 @@ alisdk
 
 
 Demo for php:
-###
-require_once ('/alisdk/AliClient.php');
-require_once ('/alisdk/RequestCheckUtil.php');
 
-require_once ('/alisdk/request/AliCompanyGetRequest.php');
+` `` require_once ('/alisdk/AliClient.php');
+` `` require_once ('/alisdk/RequestCheckUtil.php');
+
+` `` require_once ('/alisdk/request/AliCompanyGetRequest.php');
 
 /**
  * 获取单个公司库信息
  */
-function(){
-   $session =  $this->getSession();
-   $client = new AliClient();
-   $client->appkey = "you appkey";
-   $client->secretKey = "you secretKey";
-   $client->api = "company.get";
+` `` function(){
+` ``    $session =  $this->getSession();
+` ``    $client = new AliClient();
+` ``    $client->appkey = "you appkey";
+` ``   $client->secretKey = "you secretKey";
+` ``    $client->api = "company.get";
    
-   $request = new AliCompanyGetRequest();
-   $request->setMemberId($session->memberId);
-   $request->setFields("memberId,companyId,companyStatus,companyName,companyNameEN,account,productionService,companyCategoryInfo,foundedPlace");
+` ``    $request = new AliCompanyGetRequest();
+` ``    $request->setMemberId($session->memberId);
+` ``    $request->setFields("memberId,companyId,companyStatus,companyName,companyNameEN,account,productionService,companyCategoryInfo,foundedPlace");
    
-   $rsp =  $client->execute($request,$session->access_token);
+` ``    $rsp =  $client->execute($request,$session->access_token);
    
-   echo  $rsp;
-}
-##
+` ``    echo  $rsp;
+` `` }
+
 
